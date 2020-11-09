@@ -1,9 +1,16 @@
-var favouriteFood = "sushi";
+// hoisted - global context
+var favouriteFood = undefined;
+var foodThoughts = undefined;
 
-var foodThoughts = function() {
+favouriteFood = "sushi";
+
+// new execution context created
+foodThoughts = function() {
+    // hoisted - new execution context
+    var favouriteFood = undefined;
     console.log("Original favourite food: " + favouriteFood);
 
-    var favouriteFood = "ice cream";
+    favouriteFood = "ice cream";
 
     console.log("New favourite food: " + favouriteFood);
 }
