@@ -1,9 +1,9 @@
-const favouriteFood = "sushi";
+let favouriteFood = "sushi";
 
 const foodThoughts = function() {
     console.log("Original favourite food: " + favouriteFood);
 
-    const favouriteFood = "ice cream";
+    favouriteFood = "ice cream";
 
     console.log("New favourite food: " + favouriteFood);
 }
