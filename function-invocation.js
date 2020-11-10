@@ -13,10 +13,11 @@ function kingston() {
 murmansk();
 kingston();
 
-function marry(person1, person2) 
+function marry(...args) 
 {
-    console.log('arguments', arguments);
-    return `${person1} is now married to ${person2}`;
+    console.log('arguments', args);
+    console.log(Array.from(arguments));
+    return `${args[0]} is now married to ${args[1]}`;
 }
 
 console.log(marry('luke', 'lorelai'));
