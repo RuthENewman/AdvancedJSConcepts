@@ -1,4 +1,4 @@
-'use strict'
+// 'use strict'
 
 function weird() {
     var height = 50;
@@ -8,3 +8,4 @@ function weird() {
 const result = weird();
 
 console.log(result);
+
