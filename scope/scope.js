@@ -3,7 +3,7 @@
 // block scope
 
 if (5 > 4) {
-    const  secret = '12345';
+    const secret = '12345';
 }
 
 // will error due to block scoping with const & let
@@ -14,7 +14,7 @@ function loop() {
         console.log(i);
     }
     // will error due to block scoping with const & let
-    console.log('final', i);
+    // console.log('final', i);
 }
 
 loop();
