@@ -7,15 +7,19 @@
 </head>
 <body>
     <h1>HELLOOOOOOOOOO</h1>
-    <script src="./script.js"></script>
+    <script 
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"
+    ></script>
     <script>
         var z = 1;
         var script1 = (function() {
-            function a() {
-                return 5;
-            }
+            $('h1').click(function() {
+                $('h1').hide();
+            })
             return {
-                a: a
+               
             }
         })();
     </script>
