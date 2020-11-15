@@ -20,7 +20,7 @@ const obj = {
     name: 'Charlotte',
     sing() {
         console.log('a', this);
-        var anotherFunc = function() {
+        var anotherFunc = () => {
             console.log('b', this);
         }
         anotherFunc();
