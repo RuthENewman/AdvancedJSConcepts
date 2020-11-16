@@ -11,8 +11,8 @@ a();
 const wizard = {
     name: 'Merlin',
     health: 100,
-    heal() {
-        return this.health = 100;
+    heal(num1, num2) {
+        return this.health += num1 + num2;
     }
 }
 
@@ -21,6 +21,6 @@ const archer = {
     health: 30
 }
 
-wizard.heal.call(archer);
+wizard.heal.call(archer, 50, 10);
 
 console.log(archer.health);
