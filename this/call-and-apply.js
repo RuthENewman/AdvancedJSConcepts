@@ -21,6 +21,7 @@ const archer = {
     health: 30
 }
 
-wizard.heal.call(archer, 50, 10);
+// wizard.heal.call(archer, 50, 10);
+wizard.heal.apply(archer, [40, 15]);
 
 console.log(archer.health);
