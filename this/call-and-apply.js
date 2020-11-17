@@ -22,6 +22,19 @@ const archer = {
 }
 
 // wizard.heal.call(archer, 50, 10);
-wizard.heal.apply(archer, [40, 15]);
+// wizard.heal.apply(archer, [40, 15]);
+const healArcher = wizard.heal.bind(archer, 25, 20);
+
+healArcher();
 
 console.log(archer.health);
+
+// Exercise
+
+const array = [1,2,3];
+
+function getMaxNumber(arr) {
+    return Math.max.apply(null, arr);
+}
+
+getMaxNumber(array);
