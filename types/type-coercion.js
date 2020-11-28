@@ -4,26 +4,25 @@ var jan = (false == "")
 console.log('jan', jan); // true
 
 var feb = (false == []); 
-console.log('feb', feb);
+console.log('feb', feb); // true
 
-var march = (false == {}); //
-console.log('march', march);
+var march = (false == {}); 
+console.log('march', march); // false
 
 var april = ("" == 0);
-console.log('april', april);     
+console.log('april', april); // true
+
 var may = ("" == []);
-console.log('may', may);     
+console.log('may', may); // true    
 
-var june = ("" == {}) //
-console.log('june', june);
+var june = ("" == {}); 
+console.log('june', june); // false
 
-var july = (0 == []) // false
-console.log('july', july);
+var july = (0 == []);
+console.log('july', july); // true
 
-var aug = (0 == {}) 
-// false 
-console.log('aug', aug); 
+var aug = (0 == {});
+console.log('aug', aug); // false 
 
-var sept = (0 == null)  
-// false
-console.log('sept', sept);
+var sept = (0 == null);  
+console.log('sept', sept); // false
