@@ -1,4 +1,14 @@
 1 == "1" // 1 == 1
+1 === "1" // false
+-0 === +0 // true 
+Object.is(-0,+0); // false
+
+if (1) {
+    console.log(5);
+}
+if (0) {
+    console.log(6);
+}
 
 var jan = (false == "") 
 console.log('jan', jan); // true
