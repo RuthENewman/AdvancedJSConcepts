@@ -2,6 +2,7 @@
 1 === "1" // false
 -0 === +0 // true 
 Object.is(-0,+0); // false
+NaN === NaN // true
 
 if (1) {
     console.log(5);
