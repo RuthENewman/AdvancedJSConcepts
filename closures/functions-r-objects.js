@@ -12,5 +12,17 @@ function three() {
 
 const threeCall = three.call();
 
+const four = new Function('num', 'return num');
+
+const fourCall = four(4);
+
+function heyGday() {
+    console.log('bonjour');
+}
+
+heyGday.evening = 'bonsoir';
+
 console.log(twoCall);
 console.log(threeCall);
+console.log(fourCall);
+heyGday();
