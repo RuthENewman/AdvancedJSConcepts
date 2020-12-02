@@ -20,9 +20,8 @@ function heyGday() {
     console.log('bonjour');
 }
 
-heyGday.evening = 'bonsoir';
-
 console.log(twoCall);
 console.log(threeCall);
 console.log(fourCall);
 heyGday();
+console.log(heyGday.name);
