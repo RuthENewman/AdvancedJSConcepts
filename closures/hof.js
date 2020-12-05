@@ -1,18 +1,12 @@
-function letAdamLogin() {
+function letUserLogin(user) {
     let array = [];
     for (let i = 0; i < 10000000; i++) {
         array.push(i);
     }
-    return 'Access Granted to Adam';
+    return `Access Granted to ${user}`;
 }
 
-function letEveLogin() {
-    let array = [];
-    for (let i = 0; i < 10000000; i++) {
-        array.push(i);
-    }
-    return 'Access Granted to Eve';
-}
+let adam = letUserLogin('Adam');
+let eve = letUserLogin('Eve');
 
-letAdamLogin();
-letEveLogin();
+console.log(adam, eve);
