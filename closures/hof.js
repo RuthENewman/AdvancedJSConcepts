@@ -1,9 +1,11 @@
+const giveAccessTo = (username) => `Access granted to ${username}`;
+
 function letUserLogin(user) {
     let array = [];
     for (let i = 0; i < 10000000; i++) {
         array.push(i);
     }
-    return `Access Granted to ${user}`;
+    return giveAccessTo(user);
 }
 
 let adam = letUserLogin('Adam');
