@@ -1,14 +1,23 @@
 const giveAccessTo = (username) => `Access granted to ${username}`;
 
-function letUserLogin(user) {
+function authenticate(verify) {
     let array = [];
-    for (let i = 0; i < 10000000; i++) {
+    for (let i = 0; i < verify; i++) {
         array.push(i);
     }
-    return giveAccessTo(user);
+    return true;
+} 
+
+function letPersonLogin(person, fn) {
+    if (person.level === 'admin') {
+        fn(5000000);
+    } else if (person.level === 'user') {
+        fn(1000000);
+    }
+    return giveAccessTo(person.name);
 }
 
-let adam = letUserLogin('Adam');
-let eve = letUserLogin('Eve');
+let captain = letPersonLogin({level: 'admin', name: 'Raymond'}, authenticate);
+let detective = letPersonLogin({level: 'user', name: 'Jake'}, authenticate);
 
-console.log(adam, eve);
+console.log(captain, detective);
