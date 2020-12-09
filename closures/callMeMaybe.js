@@ -6,3 +6,12 @@ function callMeMaybe() {
 }
 
 callMeMaybe();
+
+function callMeMaybeAgain() {
+    setTimeout(function() {
+        console.log(callMeAgain);
+    }, 5000);
+    const callMeAgain = 'Here I am again';
+}
+
+callMeMaybeAgain();
