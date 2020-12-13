@@ -25,3 +25,6 @@ lizard.__proto__ = dragon;
 console.log(lizard.sing());
 console.log(lizard.fire);
 console.log(lizard.fight());
+
+console.log(dragon.isPrototypeOf(lizard));
+console.log(lizard.isPrototypeOf(dragon));
