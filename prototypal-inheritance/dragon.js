@@ -11,9 +11,6 @@ let dragon = {
     }
 }
 
-dragon.sing();
-dragon.fight();
-
 let lizard = {
     name: 'Komodo',
     fight() {
@@ -22,9 +19,9 @@ let lizard = {
 }
 
 lizard.__proto__ = dragon;
-console.log(lizard.sing());
-console.log(lizard.fire);
-console.log(lizard.fight());
 
-console.log(dragon.isPrototypeOf(lizard));
-console.log(lizard.isPrototypeOf(dragon));
+for (let prop in lizard) {
+    if (lizard.hasOwnProperty(prop)) {
+        console.log(prop);
+    }
+}
