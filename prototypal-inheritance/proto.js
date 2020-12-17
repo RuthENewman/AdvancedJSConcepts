@@ -19,3 +19,10 @@ function multiplyByFive(num) {
 }
 
 multiplyByFive.__proto__ === Function.prototype; // true
+
+// arrays 
+const array = [];
+[].hasOwnProperty('map'); // false
+array.hasOwnProperty('map'); // false
+array.__proto__.hasOwnProperty('map'); // true
+array.__proto__ === Array.prototype; // true
