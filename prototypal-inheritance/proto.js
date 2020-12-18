@@ -19,6 +19,7 @@ function multiplyByFive(num) {
 }
 
 multiplyByFive.__proto__ === Function.prototype; // true
+console.log(multiplyByFive.prototype);
 
 // arrays 
 const array = [];
@@ -26,3 +27,6 @@ const array = [];
 array.hasOwnProperty('map'); // false
 array.__proto__.hasOwnProperty('map'); // true
 array.__proto__ === Array.prototype; // true
+
+multiplyByFive.__proto__.__proto__ === Object.prototype; // true
+multiplyByFive.__proto__.__proto__.__proto__; // null
