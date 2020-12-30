@@ -8,7 +8,7 @@ Elf.prototype.attack = function() {
 }
 
 const peter = new Elf('Peter', 'stones');
-console.log(peter.attack());
+console.log(Elf.prototype === peter.__proto__); // true
 
 const sam = new Elf('Peter', 'fire');
 console.log(sam.attack());
