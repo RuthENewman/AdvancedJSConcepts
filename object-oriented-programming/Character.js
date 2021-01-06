@@ -38,7 +38,13 @@ class Slayer extends Character {
 
 class Witch extends Character {
     constructor(name, firstEpisode, lastEpisode) {
-        super(name, firstEpisode, lastEpisode)
+        super(name, firstEpisode, lastEpisode);
+    }
+}
+
+class Watcher extends Character {
+    constructor(name, firstEpisode, lastEpisode) {
+        super(name, firstEpisode, lastEpisode);
     }
 }
 
@@ -58,10 +64,11 @@ const faith = new Slayer('Faith', '303', '722', 'Wesley');
 console.log(faith.firstSeason());
 
 const willow = new Witch('Willow', '101', '722');
-
 const tara = new Witch('Tara', '410', '620');
-
 const amy = new Witch('Amy', '101', '713');
+
+const giles = new Watcher('Giles', '101', '722');
+const wesley = new Watcher('Wesley', '314', '322');
 
 console.log(Slayer.isPrototypeOf(buffy)); // false
 console.log(Slayer.prototype.isPrototypeOf(buffy)); // true
