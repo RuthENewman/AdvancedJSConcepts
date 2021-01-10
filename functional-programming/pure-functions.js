@@ -7,18 +7,13 @@ function removeLastItem(arr) {
     newArray.pop();
     return newArray;
 }
-function shortenArray(arr) {
-    arr.pop();
-}
-function lengthenArray(arr) {
-    arr.forEach(item => {
-        arr.push(1);
-    });
+function multiplyByTwo(arr) {
+    return arr.map(item => item * 2);
 }
 
-// shortenArray(array);
-// console.log(array);
-console.log(removeLastItem(array));
-console.log(array);
-lengthenArray(array);
-console.log(array);
+const shorterArray = removeLastItem(array);
+const doubledArray = multiplyByTwo(array);
+
+console.log('Original array', array);
+console.log('Short array', shorterArray);
+console.log('Original array', array);
