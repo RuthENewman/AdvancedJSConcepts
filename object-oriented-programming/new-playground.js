@@ -4,3 +4,4 @@ var b = 5;
 console.log(typeof b); // number
 console.log(a == b); // true
 console.log(a === b); // false
+
