@@ -5,14 +5,14 @@ const user = {
     cart: [],
     purchases: []
 }
-const compose = (f, g) => {...args} => f(g(...args));
+const compose = (f, g) => (...args) => f(g(...args));
 
 purchaseItem(
     emptyCart,
     buyItem,
     addTax,
     addItemToCart
-)(user, {name: "Laptop", price: 650});
+)(user, {name: "Laptop", price: 450});
 
 function purchaseItem(...fns) {
     fns.reduce(compose);
@@ -40,7 +40,6 @@ const buyItem = (user, item) => {
 }
 
 const emptyCart = (user) => {
-    user.cart = [];
-    return user;
+    return Object.assign({}, user, {cart: []});
 }
 
