@@ -36,9 +36,7 @@ const addTax = (user, item) => {
 }
 
 const buyItem = (user, item) => {
-    const itemInCart = user.cart.find(item => itemInCart === item);
-    user.purchases = user.purchases.push(itemInCart);
-    return user;
+    return Object.assign({}, user, { purchases: user.cart});
 }
 
 const emptyCart = (user) => {
