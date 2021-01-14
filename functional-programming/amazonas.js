@@ -14,7 +14,9 @@ purchaseItem(
     addItemToCart
 )(user, {name: "Laptop", price: 650});
 
-const purchaseItem = (...fns) => fns.reduce(compose);
+function purchaseItem(...fns) {
+    fns.reduce(compose);
+}
 
 const addItemToCart = (user, item) => {
     const updatedCart = user.cart.concat(item);
@@ -22,9 +24,15 @@ const addItemToCart = (user, item) => {
 }
 
 const addTax = (user, item) => {
-    const itemToTax = user.cart.find(itemInCart => itemInCart === item);
-    itemToTax.price = (itemToTax.price * 1.03);
-    return user;
+    const { cart } = user;
+    const taxRate = 1.2;
+    const updatedCart = cart.map(item => {
+        return {
+            name: item.name,
+            price: item.price * taxRate
+        }
+    });
+    return Object.assign({}, user, {cart: updatedCart });
 }
 
 const buyItem = (user, item) => {
