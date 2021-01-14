@@ -6,6 +6,12 @@ const user = {
     purchases: []
 }
 
+console.log(purchaseItem(user, {name: "Laptop", price: 650}));
+
+function purchaseItem(user, item) {
+    return Object.assign({}, user, {purchases: item});
+}
+
 const addItemToCart = (user, item) => {
     user.cart = [...user.cart, item];
     return user.cart;
@@ -27,3 +33,4 @@ const emptyCart = (user) => {
     user.cart = [];
     return user;
 }
+
