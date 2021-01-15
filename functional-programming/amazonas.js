@@ -5,7 +5,9 @@ const user = {
     cart: [],
     purchases: []
 }
-const compose = (f, g) => (...args) => f(g(...args));
+const amazonasHistory = [];
+const compose = (f, g) => (...args) => f(g(...args))
+const purchaseItem = (...fns) => fns.reduce(compose);
 
 purchaseItem(
     emptyCart,
@@ -14,16 +16,15 @@ purchaseItem(
     addItemToCart
 )(user, {name: "Laptop", price: 450});
 
-function purchaseItem(...fns) {
-    fns.reduce(compose);
-}
 
-const addItemToCart = (user, item) => {
+function addItemToCart(user, item) {
+    amazonasHistory.push(user);
     const updatedCart = user.cart.concat(item);
     return Object.assign({}, user, {cart: updatedCart });
 }
 
-const addTax = (user, item) => {
+function addTax(user, item) {
+    amazonasHistory.push(user);
     const { cart } = user;
     const taxRate = 1.2;
     const updatedCart = cart.map(item => {
@@ -35,11 +36,15 @@ const addTax = (user, item) => {
     return Object.assign({}, user, {cart: updatedCart });
 }
 
-const buyItem = (user, item) => {
+function buyItem(user, item) {
+    amazonasHistory.push(user);
     return Object.assign({}, user, { purchases: user.cart});
 }
 
-const emptyCart = (user) => {
+function emptyCart(user) {
+    amazonasHistory.push(user);
     return Object.assign({}, user, {cart: []});
 }
+
+console.log(amazonasHistory);
 
