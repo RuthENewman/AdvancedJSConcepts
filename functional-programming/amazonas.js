@@ -1,4 +1,6 @@
-// Shopping
+// Composition
+// What it has
+
 const user = {
     name: 'Kim',
     active: true,

@@ -1,4 +1,8 @@
-// ES6 class
+// Inheritance
+// What it is
+// Tight coupling
+// Fragile base class problem
+
 class Character {
     constructor(name, firstEpisode, lastEpisode) {
         this.name = name;
