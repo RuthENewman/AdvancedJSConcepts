@@ -1,6 +1,26 @@
 // Composition
 // What it has
 
+// many operations on fixed data
+// stateless
+// pure
+// declarative
+
+function addNameSire(character) {
+    return Object.assign({}, character, {nameSire: () => {}});
+}
+
+function Vampire(name, firstEpisode, lastEpisode, sire) {
+    let vampire = {
+        name,
+        firstEpisode,
+        lastEpisode,
+        sire
+    }
+}
+
+Vampire += nameSire();
+
 const user = {
     name: 'Kim',
     active: true,

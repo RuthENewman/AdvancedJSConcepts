@@ -1,7 +1,8 @@
 // Inheritance
 // What it is
-// Tight coupling
-// Fragile base class problem
+// Few operations on common data
+// side effect
+// imperative
 
 class Character {
     constructor(name, firstEpisode, lastEpisode) {
@@ -27,6 +28,9 @@ class Vampire extends Character {
     constructor(name, firstEpisode, lastEpisode, sire) {
         super(name, firstEpisode, lastEpisode);
         this.sire = sire;
+    }
+    nameSire() {
+        return `${this.name} was sired by ${this.sire}.`;
     }
 }
 
