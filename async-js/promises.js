@@ -1,24 +1,16 @@
-// e1.addEventListener("click", submitForm);
-
-// // callback pyramid of doom
-// movePlayer(100, "Left", function() {
-//     movePlayer(400, "Left", function() {
-//         movePlayer(10, "Right", function() {
-//             movePlayer(330, "Left", function() {
-//             });
-//         });
-//     });
-// });
-
-const promise = new Promise((resolve, reject) => {
-    if (true) {
-        resolve('Voila');
-    } else {
-        reject('Error, computer says no');
-    }
+const promiseOne = new Promise((resolve, reject) => {
+    setTimeout(resolve, 100, 'You');
 });
 
-promise.then(result => result + "!")
-       .then(resultShouted => resultShouted + "?")
-       .catch(() => console.log('Error'))
-       .then(resultQuestioned => console.log(resultQuestioned + "!"));
+const promiseTwo = new Promise((resolve, rejet) => {
+    setTimeout(resolve, 1000, 'were');
+})
+
+const promiseThree = new Promise((resolve, reject) => {
+    setTimeout(resolve, 3000, 'myth-taken');
+});
+
+Promise.all([promiseOne, promiseTwo, promiseThree])
+        .then(values => {
+            console.log(values);
+        });
