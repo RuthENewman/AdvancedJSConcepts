@@ -12,10 +12,13 @@
 
 const promise = new Promise((resolve, reject) => {
     if (true) {
-        resolve('Voila!');
+        resolve('Voila');
     } else {
         reject('Error, computer says no');
     }
 });
 
-promise.then(result => console.log(result));
+promise.then(result => result + "!")
+       .then(resultShouted => resultShouted + "?")
+       .catch(() => console.log('Error'))
+       .then(resultQuestioned => console.log(resultQuestioned + "!"));
