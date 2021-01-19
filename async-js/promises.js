@@ -16,4 +16,6 @@ const promise = new Promise((resolve, reject) => {
     } else {
         reject('Error, computer says no');
     }
-})
+});
+
+promise.then(result => console.log(result));
