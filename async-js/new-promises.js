@@ -5,12 +5,16 @@ const urls = [
 ];
 
 const getData = async function() {
-    const [users, posts, albums] = await Promise.all(urls.map(url => {
-        return fetch(url).then(response => response.json())
-    }))
-    console.log('users', users);
-    console.log('posts', posts);
-    console.log('albums', albums);
+    try {
+        const [users, posts, albums] = await Promise.all(urls.map(url => {
+            return fetch(url).then(response => response.json())
+        }))
+        console.log('users', users);
+        console.log('posts', posts);
+        console.log('albums', albums);
+    } catch {
+        console.log('Error. API call did not work');
+    }
 }
 
 getData();
