@@ -18,3 +18,11 @@ const getData = async function() {
 }
 
 getData();
+
+const loopThroughUrls = urls => {
+    for(url of urls) {
+        console.log(url);
+    }
+}
+
+loopThroughUrls(urls);
