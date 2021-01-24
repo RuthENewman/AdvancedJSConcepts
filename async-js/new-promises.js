@@ -19,10 +19,12 @@ const getData = async function() {
 
 getData();
 
-const loopThroughUrls = urls => {
-    for(url of urls) {
-        console.log(url);
+const getMoreData = async function() {
+    const promisesArray = urls.map(url => fetch(url));
+    for await (let request of promisesArray) {
+        const data = await request.json();
+        console.log(data);
     }
 }
 
-loopThroughUrls(urls);
+getMoreData();
