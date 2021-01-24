@@ -13,3 +13,13 @@ async function parallel() {
     const [output1, output2, output3] = await Promise.all(promises);
     return `parallel is done: ${output1} ${output2} ${output3}`;
 }
+
+parallel().then(console.log);
+
+async function race() {
+    const promises = [a(), b(), c()];
+    const output1 = await Promise.race(promises);
+    return `race is done: ${output1}`;
+}
+
+race().then(console.log)
