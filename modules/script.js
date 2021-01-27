@@ -1,12 +1,22 @@
-var johnny = 'Johnny Lawrence';
-var daniel = 'Daniel LaRusso';
+// IIFE - immediately invoked function expression
+// Module Pattern
 
-function fight(characterOne, characterTwo) {
-    const attackOne = Math.floor(Math.random() * [characterOne.length]);
-    const attackTwo = Math.floor(Math.random() * [characterTwo.length]);
-    return attackOne > attackTwo ? `${characterOne} wins!` : `${characterTwo} wins!`;
-}
+var fightModule = (function() {
+    var johnny = 'Johnny Lawrence';
+    var daniel = 'Daniel LaRusso';
 
-const allValleyChamp = fight(johnny, daniel);
+    function fight(characterOne, characterTwo) {
+        const attackOne = Math.floor(Math.random() * [characterOne.length]);
+        const attackTwo = Math.floor(Math.random() * [characterTwo.length]);
+        return attackOne > attackTwo ? `${characterOne} wins!` : `${characterTwo} wins!`;
+    }
 
-console.log(allValleyChamp);
+    return {
+        fight: fight
+    }
+    })()
+
+// Global Scope
+    // Module Scope
+        // Function scope
+            // Block scope
