@@ -10,9 +10,16 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="./script.js"></script>
     <script>
-         var script2 = $("h1").click(function() {
+        var globalSecret = '4321';
+        var fight = 'miyagido';
+    </script>
+    <script>
+         var script2 = (function(gs) {
+                $("h1").click(function() {
                 $("h1").hide();
-            })();
+            })
+            gs = '314'
+        })(globalSecret);
     </script>
 </body>
 </html>
