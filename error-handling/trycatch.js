@@ -1,8 +1,9 @@
 function fail() {
     try {
-        consol.log('this works');
+        console.log('this works');
+        throw new Error('oops!');
     } catch (error) {
-        console.log('made an error somewhere');
+        console.log(error.message);
     }
 }
 

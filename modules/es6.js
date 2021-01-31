@@ -1,8 +1,8 @@
 const johnny = 'Johnny Lawrence';
 const daniel = 'Daniel LaRusso';
 
-function jump() {
-
+export function jump() {
+    console.log('JUMP!');
 }
 
 export default function fight(characterOne, characterTwo) {
