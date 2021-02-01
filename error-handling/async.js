@@ -8,9 +8,6 @@ Promise.resolve('asyncfail')
     .then(response => {
         console.log(response);
     })
-    .then(response => {
-        console.log(response.message);
-    })
     .catch(error => {
-        console.log('final error');
+        console.log('final error', error);
     })
